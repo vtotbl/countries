@@ -693,6 +693,10 @@ func (c CountryCode) String() string { //nolint:gocyclo
 	return UnknownMsg
 }
 
+func (c CountryCode) Code() int64 {
+	return int64(c)
+}
+
 // StringRus - returns a russian name of country
 //
 //nolint:gocyclo
