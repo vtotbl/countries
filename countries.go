@@ -5477,6 +5477,15 @@ func AllInfo() []*Country {
 	return countries
 }
 
+func ByRuName(ruName string) CountryCode {
+	country, ok := matchRuToCode[ruName]
+	if !ok {
+		return None
+	}
+
+	return country
+}
+
 // ByName - return CountryCode by country Alpha-2 / Alpha-3 / name, case-insensitive, example: rus := ByName("Ru") OR rus := ByName("russia"),
 // returns countries.Unknown, if country name not found or not valid
 //
